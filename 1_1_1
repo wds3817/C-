@@ -21,4 +21,13 @@ int main() {
  *  void qsort(void *base, int nelem, unsigned int width,
  *  int (* pfCompare)(const void *, const void *));
  *  可以对任意类型的数组排序 
+ *  1.数组起始地址；
+ *  2.数组元素的个数；
+ *  3.每个元素的大小（可以算出每个元素的地址）
+ *  4.元素谁在前谁在后的规则 
+ *  5. pfCompare：函数指针， 它指向一个比较函数。 比较函数是程序员自己写的。 
+ *  比较函数编写规则：
+ *  1. 如果 * elem1 应该排在* elem2 前面， 则函数返回值应该是负整数；
+ *  2. 如果 * elem1 和* elem2哪个排在前面都行， 则函数返回0；
+ *  3. 如果* elem1应该排在* elem2后面， 则函数返回值是正整数。 
  */
